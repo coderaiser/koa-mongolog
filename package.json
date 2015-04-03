@@ -1,0 +1,29 @@
+{
+  "name": "koa-mongolog",
+  "version": "1.0.0",
+  "description": "koa middleware for logging http queries to mongoDB",
+  "main": "lib/mongolog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/node-koa-mongolog.git"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "mongodb",
+    "query",
+    "log"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/koa-mongolog/issues"
+  },
+  "homepage": "https://github.com/coderaiser/koa-mongolog",
+  "dependencies": {
+    "mongolog": "~1.0.0"
+  }
+}
