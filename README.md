@@ -38,17 +38,21 @@ var mongolog    = require('mongolog'),
     app     = koa();
 
 mongo.connect(url, function(error, db) {
-    app.use(mongolog({
-        db: db
-    }));
-    
-    app.use(function*(next) {
-        console.log(this.request.url);
-        yield next;
-    });
-    
-    app.listen(port);
-    console.log('http://localhost:%s', port); 
+    if (error) {
+        console.error(error.message);
+    } else {
+        app.use(mongolog({
+            db: db
+        }));
+        
+        app.use(function*(next) {
+            console.log(this.request.url);
+            yield next;
+        });
+        
+        app.listen(port);
+        console.log('http://localhost:%s', port);
+    }
 });
 ```
 
